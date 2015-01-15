@@ -16,6 +16,11 @@ rpois(5, 2)
     It is impossible to tell because the result is random
     A vector with the numbers 3.3, 2.5, 0.5, 1.1, 1.7
 
+```{r}
+set.seed(1)
+rpois(5, 2)
+```
+
 ### Question 2
 
 What R function can be used to generate standard Normal random variables?
@@ -24,6 +29,10 @@ What R function can be used to generate standard Normal random variables?
     pnorm
     dnorm
     qnorm
+
+```
+Answer: rnorm
+```
 
 ### Question 3
 
@@ -34,6 +43,10 @@ When simulating data, why is using the set.seed() function important?
     It ensures that the random numbers generated are within specified boundaries.
     It can be used to generate non-uniform random numbers.
 
+```
+Answer: It can be used to specify which random number generating algorithm R should use, ensuring consistency and reproducibility.
+```
+
 ### Question 4
 
 Which function can be used to evaluate the inverse cumulative distribution function for the Poisson distribution?
@@ -42,6 +55,10 @@ Which function can be used to evaluate the inverse cumulative distribution funct
     dpois
     rpois
     qpois
+
+```
+Answer: qpois
+```
 
 ### Question 5
 
@@ -57,6 +74,10 @@ y <- 0.5 + 2 * x + e
     Generate uniformly distributed random data
     Generate random exponentially distributed data
 
+```
+Answer: Generate data from a Normal linear model
+```
+
 ### Question 6
 
 What R function can be used to generate Binomial random variables?
@@ -66,6 +87,10 @@ What R function can be used to generate Binomial random variables?
     rbinom
     pbinom
 
+```
+Answer: rbinom
+```
+
 ### Question 7
 
 What aspect of the R runtime does the profiler keep track of when an R expression is evaluated?
@@ -74,6 +99,10 @@ What aspect of the R runtime does the profiler keep track of when an R expressio
     the function call stack
     the global environment
     the working directory
+
+```
+Answer: the function call stack
+```
 
 ### Question 8
 
@@ -91,6 +120,10 @@ Rprof(NULL)
     50%
     100%
 
+```
+Answer: 100%
+```
+
 ### Question 9
 
 When using 'system.time()', what is the user time?
@@ -100,6 +133,10 @@ When using 'system.time()', what is the user time?
     It is the time spent by the CPU evaluating an expression
     It is the "wall-clock" time it takes to evaluate an expression
 
+```
+Answer: It is the time spent by the CPU evaluating an expression
+```
+
 ### Question 10
 
 If a computer has more than one available processor and R is able to take advantage of that, then which of the following is true when using 'system.time()'?
@@ -108,3 +145,7 @@ If a computer has more than one available processor and R is able to take advant
     elapsed time is 0
     elapsed time may be smaller than user time
     user time is 0
+
+```
+Answer: elapsed time may be smaller than user time
+```

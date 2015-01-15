@@ -65,6 +65,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <p>?iris</p>
 <p>There will be an object called ‘iris’ in your workspace. In this dataset, what is the mean of ‘Sepal.Length’ for the species virginica? (Please only enter the numeric result and nothing else.)</p>
 <p>Answer for Question 1</p>
+<pre class="r"><code>mean(iris[iris$Species == &quot;virginica&quot;, ]$Sepal.Length, na.rm=T)</code></pre>
+<pre><code>## [1] 6.588</code></pre>
 </div>
 <div id="question-2" class="section level3">
 <h3>Question 2</h3>
@@ -73,6 +75,9 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 apply(iris[, 1:4], 1, mean)
 apply(iris, 1, mean)
 apply(iris[, 1:4], 2, mean)</code></pre>
+<pre class="r"><code>apply(iris[, 1:4], 2, mean)</code></pre>
+<pre><code>## Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+##     5.843333     3.057333     3.758000     1.199333</code></pre>
 </div>
 <div id="question-3" class="section level3">
 <h3>Question 3</h3>
@@ -85,11 +90,16 @@ apply(iris[, 1:4], 2, mean)</code></pre>
 lapply(mtcars, mean)
 apply(mtcars, 2, mean)
 tapply(mtcars$mpg, mtcars$cyl, mean)</code></pre>
+<pre class="r"><code>tapply(mtcars$mpg, mtcars$cyl, mean)</code></pre>
+<pre><code>##        4        6        8 
+## 26.66364 19.74286 15.10000</code></pre>
 </div>
 <div id="question-4" class="section level3">
 <h3>Question 4</h3>
 <p>Continuing with the ‘mtcars’ dataset from the previous Question, what is the absolute difference between the average horsepower of 4-cylinder cars and the average horsepower of 8-cylinder cars?</p>
 <p>Answer for Question 4</p>
+<pre class="r"><code>abs(mean(mtcars[mtcars$cyl==4,]$hp) - mean(mtcars[mtcars$cyl==8,]$hp))</code></pre>
+<pre><code>## [1] 126.5779</code></pre>
 </div>
 <div id="question-5" class="section level3">
 <h3>Question 5</h3>
@@ -100,6 +110,7 @@ tapply(mtcars$mpg, mtcars$cyl, mean)</code></pre>
 Execution of 'ls' will suspend at the beginning of the function and you will be in the browser.
 The 'ls' function will execute as usual.
 The 'ls' function will return an error.</code></pre>
+<pre><code>Answer: Execution of 'ls' will suspend at the beginning of the function and you will be in the browser.</code></pre>
 </div>
 
 
